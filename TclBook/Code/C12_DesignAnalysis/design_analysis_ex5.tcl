@@ -1,0 +1,13 @@
+# design_analysis_ex5.tcl
+set all_cr [get_clock_regions]
+#X0Y0 X1Y0 X2Y0 X3Y0 X4Y0 X5Y0 X0Y1 ...
+llength $all_cr
+get_clock_regions -of [get_tiles CLEL_R_X0Y0]
+get_tiles -of [get_clock_regions X0Y0]
+#INT_INTF_L_TERM_GT_X0Y59 INT_X0Y59 CLEL_R_X0Y59 CLEM_X1Y59 ...
+get_clock_regions -of [get_sites SLICE_X0Y0]
+get_sites -of [get_clock_regions X2Y2]
+#SLICE_X55Y179 SLICE_X56Y179 SLICE_X57Y179 ...
+get_bels -of [get_clock_regions X2Y2]
+#BIAS_X0Y4/BIAS HPIO_VREF_SITE_X0Y4/HPIO_VREF1 ...
+get_clock_regions -of [get_sites -of [get_bels SLICE_X0Y0/DFF]]

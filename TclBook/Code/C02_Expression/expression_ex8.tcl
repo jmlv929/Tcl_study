@@ -1,0 +1,8 @@
+# expression_ex8.tcl
+expr {0xF & 0x9}
+expr {0x0 | 0x9}
+expr {0xF ^ 0x5}
+expr {~0xA}
+expr {2 << 4}
+expr {8 >> 2}
+expr {-8 >> 2}

@@ -1,0 +1,4 @@
+# design_analysis_ex37.tcl
+source impl_2Project_MLStrategyCreateRun1.tcl
+source impl_2Project_MLStrategyCreateRun2.tcl
+source impl_2Project_MLStrategyCreateRun3.tcl
